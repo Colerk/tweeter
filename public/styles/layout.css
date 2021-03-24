@@ -18,8 +18,21 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Bungee', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* 
+It should be only 90% of the width of its parent element
+It should be center aligned to the body
+It should have the same colour background as the <body> element */
+
+
+
+/* .containter {
+  justify-content: center;
+  align-items: center;
+} */
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
