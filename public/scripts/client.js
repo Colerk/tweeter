@@ -3,13 +3,12 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// $('.errors').hide()
 
 $( document ).ready(function() {
   $('.errors').hide()
-  
 
   const data = []
+
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -74,29 +73,24 @@ $( document ).ready(function() {
   })
 
   const loadTweets = function(){
-    // $(".errors").hide()
     $.ajax({
       url: '/tweets',
       method: 'GET'
     })
     .then(function (results) {
-      // console.log('results', JSON.stringify(results))
       renderTweets(results)
     })
   }
   
   loadTweets(data)
 
-
   const renderTweets = function(arr) {
+    $("#tweets-container").empty()
     for (let obj of arr) {
       let tweet = createTweetElement(obj)
       $("#tweets-container").prepend(tweet)
     }
   }  
-  
-  renderTweets(data);
-  
 
 
 });

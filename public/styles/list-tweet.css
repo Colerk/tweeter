@@ -8,7 +8,6 @@
   padding: 15px;
   margin-top: 40px;
   margin-bottom: 40px;
-
 }
 
 .username {
@@ -41,12 +40,10 @@
   padding-right: 10px;
 }
 .post {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   font-weight: 600;
   border-bottom: 4px solid #545149;
   padding: 20px;
+  word-wrap: break-word;
 }
 
 .list-tweet footer {
@@ -54,5 +51,4 @@
   font-size: 16px;
   padding: 10px;
   justify-content: space-between;
-
 }
