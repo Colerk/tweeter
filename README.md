@@ -6,6 +6,12 @@ It was a great way to practice some HTML, CSS, JS, jQuery and AJAX front-end ski
 
 Feel free to build upon what I have here or reach out if you have any questions.
 
+## Screenshots
+
+!["Showing error messages"](https://github.com/Colerk/tweeter/blob/master/docs/Errors.png)
+!["Mobile viewing"](https://github.com/Colerk/tweeter/blob/master/docs/Mobile.png)
+!["Full size viewing"](https://github.com/Colerk/tweeter/blob/master/docs/Full%20size%20device.png)
+
 ## Dependencies
 
  - body-parser
@@ -13,3 +19,4 @@ Feel free to build upon what I have here or reach out if you have any questions.
  - express
  - md5
  - Node
+
