@@ -19,12 +19,13 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>  
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/hover.js"></script>
-
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
 
   </head>
 
@@ -49,14 +50,17 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="../tweets">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <div id='message'>
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          </div>
           <footer>
             <button type="submit">Tweet</button>
             <output id="counter" name="counter" class="counter" for="tweet-text"></output>
           </footer>
         </form>
       </section>
-      <section class="list-tweet">
+      <section id="tweets-container"></section>
+      <!-- <section class="list-tweet">
         <article>
           <header>
             <div class="logo">           
@@ -75,17 +79,13 @@
               10 days ago
             </div>
             <div>
-              flag
-              refersh
-              heart
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
             </div>
           </footer>
         </article>
-      </section>
-
-      <p>&nbsp;</p> <p>&nbsp;</p> 
-      <p>&nbsp;</p> 
-
+      </section> -->
     </main>
   </body>
 </html>

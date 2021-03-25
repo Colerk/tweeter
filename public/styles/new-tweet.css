@@ -11,9 +11,10 @@ textarea {
   background: transparent;
   border: 0;
   border-bottom: 4px solid #000000;
-  height: 45px;
+  height: 55px;
   font-weight:600;
   width: 100%;
+  resize: none;
 }
 
 .new-tweet footer {
