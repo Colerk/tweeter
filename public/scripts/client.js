@@ -5,7 +5,7 @@
  */
 
 $( document ).ready(function() {
-
+  $('.errors').hide()
   
 
   const data = [
@@ -73,7 +73,8 @@ $( document ).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     if ($('#tweet-text').val() === '') {
-      $(".new-tweet").prepend("<div class='errors'>You can not post and empty tweet</div>")
+      // $(".new-tweet").prepend("<div class='errors'>You can not post and empty tweet</div>")
+      $('.errors').html('You can not post and empty tweet.');
       $(".errors").hide().slideDown(400)
     } else if ($('#tweet-text').val().length > 140) {
       $(".new-tweet").prepend("<div class='errors'>Your tweet cant be longer than 140 characters</div>")
@@ -86,6 +87,7 @@ $( document ).ready(function() {
     })
     .then((result) => {
       loadTweets(data)
+      $(".errors").slideUp()
       $('#tweet-text').val('')
       $('#counter').text(140)
     }).catch(err => {
@@ -95,6 +97,7 @@ $( document ).ready(function() {
   })
 
   const loadTweets = function(){
+    // $(".errors").hide()
     $.ajax({
       url: '/tweets',
       method: 'GET'
