@@ -29,10 +29,26 @@ It should have the same colour background as the <body> element */
 
 
 
-/* .containter {
+.containter {
   justify-content: center;
   align-items: center;
-} */
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ @media only screen and (min-width: 1024px) {
+   
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-top: 120px;
+  }
+  
+}

@@ -10,3 +10,18 @@
   background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
 }
 
+@media only screen and (min-width: 1024px) {
+   
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 3%;
+    margin-top: 14%;
+    padding-top: 20px;
+    justify-content: flex-start;
+    height: 375px;
+    /* padding-top: 300px; */
+  }
+
+}
