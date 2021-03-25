@@ -11,6 +11,10 @@
   width: 100%; 
 }
 
+/* Adustment for screens above tablet size. Makes nav transparent and changes to 
+   absolute position (the fixed position looked bad on a transparent background) */
+
+
 @media only screen and (max-width: 1024px) {
    
   .nav {

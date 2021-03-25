@@ -1,3 +1,5 @@
+// This creates the counter on the tweet form.
+
 $(document).ready(function() {
   len = 140
   $('#counter').html(len)

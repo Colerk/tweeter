@@ -1,8 +1,4 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+
 html {
   box-sizing: border-box;
 }
@@ -22,20 +18,13 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* 
-It should be only 90% of the width of its parent element
-It should be center aligned to the body
-It should have the same colour background as the <body> element */
-
-
-
 .containter {
   justify-content: center;
   align-items: center;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+/* Adustment for screens above tablet size. 
+   Adds content in two columns instead of one stacked column */
  @media only screen and (min-width: 1024px) {
    
   body {

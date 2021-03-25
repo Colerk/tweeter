@@ -9,12 +9,14 @@ $( document ).ready(function() {
 
   const data = []
 
+  // function that protects from xss attacks
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+}
   
+  // html used when prepending form submissions to data
   const createTweetElement = function(tweet) {
     let output = `
     <section class="list-tweet">
@@ -47,6 +49,30 @@ $( document ).ready(function() {
     return output;
   }
 
+  // function to load and display previous tweets
+  const loadTweets = function(){
+    $.ajax({
+      url: '/tweets',
+      method: 'GET'
+    })
+    .then(function (results) {
+      renderTweets(results)
+    })
+  }
+  
+  loadTweets(data)
+
+  // function to render the tweets use the createTweetElement() function
+  const renderTweets = function(arr) {
+    $("#tweets-container").empty()
+    for (let obj of arr) {
+      let tweet = createTweetElement(obj)
+      $("#tweets-container").prepend(tweet)
+    }
+  }  
+
+  // jQuery and ajax used to load form submissions in real time
+
   $("form").submit(function(event) {
     event.preventDefault();
     if ($('#tweet-text').val() === '') {
@@ -71,26 +97,5 @@ $( document ).ready(function() {
       console.log(err)
     })
   })
-
-  const loadTweets = function(){
-    $.ajax({
-      url: '/tweets',
-      method: 'GET'
-    })
-    .then(function (results) {
-      renderTweets(results)
-    })
-  }
-  
-  loadTweets(data)
-
-  const renderTweets = function(arr) {
-    $("#tweets-container").empty()
-    for (let obj of arr) {
-      let tweet = createTweetElement(obj)
-      $("#tweets-container").prepend(tweet)
-    }
-  }  
-
 
 });

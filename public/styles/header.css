@@ -10,6 +10,8 @@
   background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
 }
 
+/* Adustment for screens above tablet size. Enables two columns instead of one */
+
 @media only screen and (min-width: 1024px) {
    
   .header {
@@ -21,7 +23,6 @@
     padding-top: 20px;
     justify-content: flex-start;
     height: 375px;
-    /* padding-top: 300px; */
   }
 
 }
