@@ -73,9 +73,11 @@ $( document ).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     if ($('#tweet-text').val() === '') {
-      return alert('No empty submissions please');
+      $(".new-tweet").prepend("<div class='errors'>You can not post and empty tweet</div>")
+      $(".errors").hide().slideDown(400)
     } else if ($('#tweet-text').val().length > 140) {
-      return alert('Too long I am afraid')
+      $(".new-tweet").prepend("<div class='errors'>Your tweet cant be longer than 140 characters</div>")
+      $(".errors").hide().slideDown(400)
     }
     $.ajax({
       url: '/tweets',

@@ -31,4 +31,14 @@ textarea {
   color: #FFFFFF;
 }
 
-
+.errors {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid red;
+  height: 70px;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  color: #8B0000;
+  font-weight: 600;
+}
